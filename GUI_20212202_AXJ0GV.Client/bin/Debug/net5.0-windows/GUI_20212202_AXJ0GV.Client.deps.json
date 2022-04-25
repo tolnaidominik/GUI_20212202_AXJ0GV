@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "GUI_20212202_AXJ0GV.Client/1.0.0": {
+        "runtime": {
+          "GUI_20212202_AXJ0GV.Client.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "GUI_20212202_AXJ0GV.Client/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
