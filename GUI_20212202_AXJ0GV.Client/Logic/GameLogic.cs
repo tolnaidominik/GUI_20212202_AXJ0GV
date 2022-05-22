@@ -13,6 +13,7 @@ namespace GUI_20212202_AXJ0GV.Client.Logic
     //      -> Healthbar set
     //      -> Mission Select
     //      -> Leaderboard
+    //      -> Movement evolve (rotate)
     public class GameLogic : IGameModel, IGameControl
     {
         const int NUMOFASTEROIDS = 10;
