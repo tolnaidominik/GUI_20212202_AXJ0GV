@@ -67,7 +67,7 @@ namespace GUI_20212202_AXJ0GV.Client.Renderer
         protected override void OnRender(DrawingContext drawingContext)
         {
             base.OnRender(drawingContext);
-            if (gameModel != null)
+            if (gameModel != null && gameModel.Lasers != null)
             {
                 //generate background image
                 drawingContext.DrawRectangle(BackgroundBrush, null, new Rect(0, 0, gameArea.Width, gameArea.Height));
