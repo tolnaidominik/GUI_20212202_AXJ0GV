@@ -8,6 +8,10 @@ using System.Windows;
 
 namespace GUI_20212202_AXJ0GV.Client.Logic
 {
+    //TODO  -> Armory (skin select, laser select)
+    //      -> Level System to finish
+    //      -> Healthbar set
+    //      -> Mission Select
     public class GameLogic : IGameModel, IGameControl
     {
         const int NUMOFASTEROIDS = 10;
