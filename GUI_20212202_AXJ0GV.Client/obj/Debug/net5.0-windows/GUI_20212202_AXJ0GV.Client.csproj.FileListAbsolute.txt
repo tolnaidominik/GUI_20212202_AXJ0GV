@@ -5,7 +5,6 @@ C:\Users\d0ci\source\repos\GUI_20212202_AXJ0GV\GUI_20212202_AXJ0GV.Client\bin\De
 C:\Users\d0ci\source\repos\GUI_20212202_AXJ0GV\GUI_20212202_AXJ0GV.Client\bin\Debug\net5.0-windows\GUI_20212202_AXJ0GV.Client.dll
 C:\Users\d0ci\source\repos\GUI_20212202_AXJ0GV\GUI_20212202_AXJ0GV.Client\bin\Debug\net5.0-windows\ref\GUI_20212202_AXJ0GV.Client.dll
 C:\Users\d0ci\source\repos\GUI_20212202_AXJ0GV\GUI_20212202_AXJ0GV.Client\bin\Debug\net5.0-windows\GUI_20212202_AXJ0GV.Client.pdb
-C:\Users\d0ci\source\repos\GUI_20212202_AXJ0GV\GUI_20212202_AXJ0GV.Client\obj\Debug\net5.0-windows\GUI_20212202_AXJ0GV.Client.csproj.AssemblyReference.cache
 C:\Users\d0ci\source\repos\GUI_20212202_AXJ0GV\GUI_20212202_AXJ0GV.Client\obj\Debug\net5.0-windows\MainWindow.g.cs
 C:\Users\d0ci\source\repos\GUI_20212202_AXJ0GV\GUI_20212202_AXJ0GV.Client\obj\Debug\net5.0-windows\App.g.cs
 C:\Users\d0ci\source\repos\GUI_20212202_AXJ0GV\GUI_20212202_AXJ0GV.Client\obj\Debug\net5.0-windows\GUI_20212202_AXJ0GV.Client_MarkupCompile.cache
@@ -20,3 +19,11 @@ C:\Users\d0ci\source\repos\GUI_20212202_AXJ0GV\GUI_20212202_AXJ0GV.Client\obj\De
 C:\Users\d0ci\source\repos\GUI_20212202_AXJ0GV\GUI_20212202_AXJ0GV.Client\obj\Debug\net5.0-windows\ref\GUI_20212202_AXJ0GV.Client.dll
 C:\Users\d0ci\source\repos\GUI_20212202_AXJ0GV\GUI_20212202_AXJ0GV.Client\obj\Debug\net5.0-windows\GUI_20212202_AXJ0GV.Client.pdb
 C:\Users\d0ci\source\repos\GUI_20212202_AXJ0GV\GUI_20212202_AXJ0GV.Client\obj\Debug\net5.0-windows\GUI_20212202_AXJ0GV.Client.genruntimeconfig.cache
+C:\Users\d0ci\source\repos\GUI_20212202_AXJ0GV\GUI_20212202_AXJ0GV.Client\obj\Debug\net5.0-windows\GeneratedInternalTypeHelper.g.cs
+C:\Users\d0ci\source\repos\GUI_20212202_AXJ0GV\GUI_20212202_AXJ0GV.Client\obj\Debug\net5.0-windows\GUI_20212202_AXJ0GV.Client.csproj.AssemblyReference.cache
+C:\Users\d0ci\source\repos\GUI_20212202_AXJ0GV\GUI_20212202_AXJ0GV.Client\bin\Debug\net5.0-windows\Renderer\Images\asteroid1.png
+C:\Users\d0ci\source\repos\GUI_20212202_AXJ0GV\GUI_20212202_AXJ0GV.Client\obj\Debug\net5.0-windows\GUI_20212202_AXJ0GV.Client_Content.g.cs
+C:\Users\d0ci\source\repos\GUI_20212202_AXJ0GV\GUI_20212202_AXJ0GV.Client\bin\Debug\net5.0-windows\Renderer\Images\satellite1.png
+C:\Users\d0ci\source\repos\GUI_20212202_AXJ0GV\GUI_20212202_AXJ0GV.Client\bin\Debug\net5.0-windows\Renderer\Images\background.png
+C:\Users\d0ci\source\repos\GUI_20212202_AXJ0GV\GUI_20212202_AXJ0GV.Client\bin\Debug\net5.0-windows\Renderer\Images\player.png
+C:\Users\d0ci\source\repos\GUI_20212202_AXJ0GV\GUI_20212202_AXJ0GV.Client\bin\Debug\net5.0-windows\Renderer\Images\player_laser.png
