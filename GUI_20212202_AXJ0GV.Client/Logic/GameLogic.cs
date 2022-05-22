@@ -12,6 +12,7 @@ namespace GUI_20212202_AXJ0GV.Client.Logic
     //      -> Level System to finish
     //      -> Healthbar set
     //      -> Mission Select
+    //      -> Leaderboard
     public class GameLogic : IGameModel, IGameControl
     {
         const int NUMOFASTEROIDS = 10;
