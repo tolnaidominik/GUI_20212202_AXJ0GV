@@ -9,6 +9,9 @@ namespace GUI_20212202_AXJ0GV.Client.Logic
 {
     public class Asteroid
     {
+        public int Level { get; set; }
+        public int Health { get; set; }
+        public int Damage { get; set; }
         static Random rng = new Random();
         public System.Drawing.Point Center { get; set; }
         public Vector Speed { get; set; }
@@ -25,6 +28,9 @@ namespace GUI_20212202_AXJ0GV.Client.Logic
 
         public Asteroid(Size area)
         {
+            this.Level = 1;
+            this.Health = 10;
+            this.Damage = 50;
             int vel = rng.Next(0, 4);
             switch (vel)
             {
@@ -48,7 +54,20 @@ namespace GUI_20212202_AXJ0GV.Client.Logic
                     break;
             }
         }
-
+        public void LevelUp()
+        {
+            Level++;
+            Health += 10;
+            Damage += 1;
+        }
+        public bool Die()
+        {
+            return Health <= 0 ? true : false;
+        }
+        public void GetHit(int Damage)
+        {
+            Health -= Damage;
+        }
         public bool Move(System.Drawing.Size area)
         {
             System.Drawing.Point newCenter =

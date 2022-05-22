@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET5_0;NETCOREAPP
 C:\Users\Dominik\Source\Repos\GUI_20212202_AXJ0GV\GUI_20212202_AXJ0GV.Client\App.xaml
-11407045341
+3848295825
 5-509866615
-8-1402251451
-193-1891726104
-MainWindow.xaml;
+13-1818672599
+194-1173790781
+MainWindow.xaml;MainWindowMenu.xaml;MissionSelectMenu.xaml;
 
 False
 

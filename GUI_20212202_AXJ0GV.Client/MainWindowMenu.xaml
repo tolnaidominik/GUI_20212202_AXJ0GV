@@ -1,0 +1,30 @@
+﻿<Window x:Class="GUI_20212202_AXJ0GV.Client.MainWindowMenu"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GUI_20212202_AXJ0GV.Client"
+        mc:Ignorable="d"
+        Title="MainWindowMenu" Height="600" Width="800" MinHeight="600" MinWidth="800">
+    <Window.DataContext>
+        <local:MainWindowMenuViewModel/>
+    </Window.DataContext>
+    <Window.Background>
+        <RadialGradientBrush>
+            <GradientStop Color="Black"/>
+            <GradientStop Color="#FF180A3C" Offset="1"/>
+        </RadialGradientBrush>
+    </Window.Background>
+    <Grid>
+        <UniformGrid Rows="4">
+            <Button Margin="250 20 250 20" Background="#FF180A3C" BorderThickness="1" BorderBrush="AliceBlue"
+                    Foreground="White" FontSize="30" Command="{Binding NewGameSelect}">New Game</Button>
+            <Button Margin="250 20 250 20" Background="#FF180A3C" BorderThickness="1" BorderBrush="AliceBlue"   
+                    Foreground="White" FontSize="30" Command="{Binding MissionSelect}">Mission Select</Button>
+            <Button Margin="250 20 250 20" Background="#FF180A3C" BorderThickness="1" BorderBrush="AliceBlue" 
+                    Foreground="White" FontSize="30">Armory</Button>
+            <Button Margin="250 20 250 20" Background="#FF180A3C" BorderThickness="1" BorderBrush="AliceBlue"  
+                    Foreground="White" FontSize="30" Click="Button_Click">Exit Game</Button>
+        </UniformGrid>
+    </Grid>
+</Window>

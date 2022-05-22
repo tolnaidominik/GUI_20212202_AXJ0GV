@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "/In6sCnk4XaGUX5XlUwaPOx51HRIUFToE5dNT2Yzb2xEGAd+Hz0A4oxIeqlCE3x/d3TO0a2KNkdxLEPkV10AUg==",
+  "dgSpecHash": "c5Py1QphgNS6YtzDTCZ0rCLgMX9+CNQN+l6w16zuKzd9JcdIjeAQI+LEy5amSh90A7CugBed4dmzfFxXa9u95g==",
   "success": true,
   "projectFilePath": "C:\\Users\\Dominik\\Source\\Repos\\GUI_20212202_AXJ0GV\\GUI_20212202_AXJ0GV.Client\\GUI_20212202_AXJ0GV.Client.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Dominik\\.nuget\\packages\\microsoft.toolkit.mvvm\\7.1.2\\microsoft.toolkit.mvvm.7.1.2.nupkg.sha512"
+  ],
   "logs": []
 }

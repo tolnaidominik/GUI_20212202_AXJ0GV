@@ -7,7 +7,21 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="MainWindowMenu.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="MissionSelectMenu.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
     <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MainWindowMenu.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MissionSelectMenu.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

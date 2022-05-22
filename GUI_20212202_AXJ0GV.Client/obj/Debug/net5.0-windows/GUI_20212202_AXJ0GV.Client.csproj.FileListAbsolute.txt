@@ -56,3 +56,9 @@ C:\Users\Dominik\Source\Repos\GUI_20212202_AXJ0GV\GUI_20212202_AXJ0GV.Client\obj
 C:\Users\Dominik\Source\Repos\GUI_20212202_AXJ0GV\GUI_20212202_AXJ0GV.Client\obj\Debug\net5.0-windows\GUI_20212202_AXJ0GV.Client.pdb
 C:\Users\Dominik\Source\Repos\GUI_20212202_AXJ0GV\GUI_20212202_AXJ0GV.Client\obj\Debug\net5.0-windows\GUI_20212202_AXJ0GV.Client.genruntimeconfig.cache
 C:\Users\Dominik\Source\Repos\GUI_20212202_AXJ0GV\GUI_20212202_AXJ0GV.Client\obj\Debug\net5.0-windows\ref\GUI_20212202_AXJ0GV.Client.dll
+C:\Users\Dominik\Source\Repos\GUI_20212202_AXJ0GV\GUI_20212202_AXJ0GV.Client\bin\Debug\net5.0-windows\Microsoft.Toolkit.Mvvm.dll
+C:\Users\Dominik\Source\Repos\GUI_20212202_AXJ0GV\GUI_20212202_AXJ0GV.Client\obj\Debug\net5.0-windows\MainWindowMenu.g.cs
+C:\Users\Dominik\Source\Repos\GUI_20212202_AXJ0GV\GUI_20212202_AXJ0GV.Client\obj\Debug\net5.0-windows\MainWindowMenu.baml
+C:\Users\Dominik\Source\Repos\GUI_20212202_AXJ0GV\GUI_20212202_AXJ0GV.Client\obj\Debug\net5.0-windows\GUI_20212202_AXJ0GV.Client.csproj.CopyComplete
+C:\Users\Dominik\Source\Repos\GUI_20212202_AXJ0GV\GUI_20212202_AXJ0GV.Client\obj\Debug\net5.0-windows\MissionSelectMenu.g.cs
+C:\Users\Dominik\Source\Repos\GUI_20212202_AXJ0GV\GUI_20212202_AXJ0GV.Client\obj\Debug\net5.0-windows\MissionSelectMenu.baml

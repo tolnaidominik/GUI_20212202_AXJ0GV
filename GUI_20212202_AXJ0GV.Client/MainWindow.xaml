@@ -4,10 +4,14 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GUI_20212202_AXJ0GV.Client"
+        xmlns:asd="clr-namespace:GUI_20212202_AXJ0GV.Client.Logic"
         xmlns:renderer="clr-namespace:GUI_20212202_AXJ0GV.Client.Renderer"
         mc:Ignorable="d"
         Title="Lasteroid" Height="600" Width="800" WindowStartupLocation="CenterScreen" SizeChanged="Client_window_SizeChanged"
         MinHeight="600" MinWidth="800" Loaded="Client_window_Loaded" KeyDown="Client_window_KeyDown">
+    <Window.DataContext>
+        <asd:GameLogic/>
+    </Window.DataContext>
     <Window.Background>
         <RadialGradientBrush>
             <GradientStop Color="Black"/>
@@ -16,5 +20,7 @@
     </Window.Background>
     <Grid x:Name="grid">
         <renderer:Display x:Name="display"/>
+        <!--<ProgressBar Background="Green" Margin="550 0 0 560"></ProgressBar>-->
     </Grid>
+    
 </Window>

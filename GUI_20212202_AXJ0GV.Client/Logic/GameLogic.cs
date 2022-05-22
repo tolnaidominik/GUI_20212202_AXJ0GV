@@ -12,6 +12,10 @@ namespace GUI_20212202_AXJ0GV.Client.Logic
     {
         const int NUMOFASTEROIDS = 10;
         public event EventHandler Changed;
+        public Player Player;
+        public AsteroidStatistic Asteroid;
+        Random rnd = new Random();
+
 
         public enum Input
         {
@@ -39,7 +43,11 @@ namespace GUI_20212202_AXJ0GV.Client.Logic
             }
         }
 
-        public GameLogic() { }
+        public GameLogic() 
+        {
+            this.Player = new Player();
+            this.Asteroid = new AsteroidStatistic();
+        }
 
         public void Control(Input input)
         {
@@ -100,6 +108,10 @@ namespace GUI_20212202_AXJ0GV.Client.Logic
                     if (asteroidRect.IntersectsWith(shipRect))
                     {
                         Asteroids.RemoveAt(i);
+                        if (Player.PlayerAlive)
+                        {
+                            Player.GetHit(this.Asteroids[i].Damage);
+                        }
                         Asteroids.Add(new Asteroid(new System.Windows.Size(gameArea.Width, gameArea.Height)));
                     }
 
@@ -109,8 +121,18 @@ namespace GUI_20212202_AXJ0GV.Client.Logic
 
                         if (laserRect.IntersectsWith(asteroidRect))
                         {
-                            Asteroids.RemoveAt(i);
-                            Asteroids.Add(new Asteroid(new System.Windows.Size(gameArea.Width, gameArea.Height)));
+                            if(Asteroids[i].Health > 0)
+                            {
+                                Asteroids[i].GetHit(this.Player.Damage);
+                                if(Asteroids[i].Health <= 0)
+                                {
+                                    Asteroids.RemoveAt(i);
+                                    Player.Xp += rnd.Next(10, 25);
+                                    Player.LevelUp();
+                                    Asteroids.Add(new Asteroid(new System.Windows.Size(gameArea.Width, gameArea.Height)));
+                                }
+                            }
+                            
                         }
                     }
                 }
