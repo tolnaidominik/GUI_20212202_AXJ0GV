@@ -1,6 +1,7 @@
 ﻿using GUI_20212202_AXJ0GV.Client.Logic;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -31,7 +32,15 @@ namespace GUI_20212202_AXJ0GV.Client.Renderer
             get
             {
                 return new ImageBrush(new BitmapImage(new Uri(
-                Path.Combine("Renderer", "Images", "player.png"), UriKind.RelativeOrAbsolute)));
+                Path.Combine("Renderer", "Images", this.gameModel.selectedShip), UriKind.RelativeOrAbsolute)));
+            }
+        }
+        public Brush SatelliteBrush
+        {
+            get
+            {
+                return new ImageBrush(new BitmapImage(new Uri(
+                Path.Combine("Renderer", "Images", "satellite1.png"), UriKind.RelativeOrAbsolute)));
             }
         }
 
@@ -52,9 +61,10 @@ namespace GUI_20212202_AXJ0GV.Client.Renderer
             }
         }
 
-        public void SetUpModel(IGameModel model)
+        public void SetUpModel(IGameModel model, string ship)
         {
             this.gameModel = model;
+            this.gameModel.selectedShip = ship;
             this.gameModel.Changed += (sender, eventargs) => this.InvalidateVisual();
         }
 
@@ -77,6 +87,8 @@ namespace GUI_20212202_AXJ0GV.Client.Renderer
                 drawingContext.DrawRectangle(PlayerBrush, null, new Rect(gameArea.Width / 2 - 25, gameArea.Height / 2 - 25, 50, 50));
                 drawingContext.Pop();
 
+                //Name ->
+
                 //generate shots
                 foreach (var laser in gameModel.Lasers)
                 {
@@ -89,16 +101,16 @@ namespace GUI_20212202_AXJ0GV.Client.Renderer
                     drawingContext.DrawEllipse(AsteroidBrush, null, new Point(item.Center.X, item.Center.Y), 25, 25);
                 }
 
-                ////generate satellites
-                //ImageBrush brush = new ImageBrush(new BitmapImage(new Uri(
-                //    Path.Combine("Renderer", "Images", "satellite1.png"), UriKind.RelativeOrAbsolute)));
-                //int count = rng.Next(1, 5);
-                //for (int i = 0; i < count; i++)
+
+                if (gameModel.SatellitesAsPowerUp != null)
+                {
+                    //generate satellite
+                    drawingContext.DrawEllipse(SatelliteBrush, null, new Point(gameModel.SatellitesAsPowerUp.Center.X, gameModel.SatellitesAsPowerUp.Center.Y), 35, 35);
+                }
+                
+                //foreach (Satellite satellite in gameModel.Satellites)
                 //{
-                //    drawingContext.DrawEllipse(
-                //        brush, null,
-                //        new Point(rng.Next(0, (int)areaWidth), rng.Next(0, (int)areaHeight)),
-                //        40, 40);
+                //    drawingContext.DrawEllipse(SatelliteBrush, null, new Point(satellite.Center.X, satellite.Center.Y), 35, 35);
                 //}
             }
         }

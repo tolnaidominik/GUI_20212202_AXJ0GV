@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Dominik\\Source\\Repos\\tolnaidominik\\GUI_20212202_AXJ0GV\\GUI_20212202_AXJ0GV.Client\\GUI_20212202_AXJ0GV.Client.csproj": {}
+    "C:\\Users\\d0ci\\source\\repos\\GUI_20212202_AXJ0GV\\GUI_20212202_AXJ0GV.Client\\GUI_20212202_AXJ0GV.Client.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Dominik\\Source\\Repos\\tolnaidominik\\GUI_20212202_AXJ0GV\\GUI_20212202_AXJ0GV.Client\\GUI_20212202_AXJ0GV.Client.csproj": {
+    "C:\\Users\\d0ci\\source\\repos\\GUI_20212202_AXJ0GV\\GUI_20212202_AXJ0GV.Client\\GUI_20212202_AXJ0GV.Client.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Dominik\\Source\\Repos\\tolnaidominik\\GUI_20212202_AXJ0GV\\GUI_20212202_AXJ0GV.Client\\GUI_20212202_AXJ0GV.Client.csproj",
+        "projectUniqueName": "C:\\Users\\d0ci\\source\\repos\\GUI_20212202_AXJ0GV\\GUI_20212202_AXJ0GV.Client\\GUI_20212202_AXJ0GV.Client.csproj",
         "projectName": "GUI_20212202_AXJ0GV.Client",
-        "projectPath": "C:\\Users\\Dominik\\Source\\Repos\\tolnaidominik\\GUI_20212202_AXJ0GV\\GUI_20212202_AXJ0GV.Client\\GUI_20212202_AXJ0GV.Client.csproj",
-        "packagesPath": "C:\\Users\\Dominik\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Dominik\\Source\\Repos\\tolnaidominik\\GUI_20212202_AXJ0GV\\GUI_20212202_AXJ0GV.Client\\obj\\",
+        "projectPath": "C:\\Users\\d0ci\\source\\repos\\GUI_20212202_AXJ0GV\\GUI_20212202_AXJ0GV.Client\\GUI_20212202_AXJ0GV.Client.csproj",
+        "packagesPath": "C:\\Users\\d0ci\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\d0ci\\source\\repos\\GUI_20212202_AXJ0GV\\GUI_20212202_AXJ0GV.Client\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "E:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Dominik\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\d0ci\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -67,7 +63,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }

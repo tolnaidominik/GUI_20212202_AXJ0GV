@@ -7,14 +7,23 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="ArmoryWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="MainWindowMenu.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="MissionSelectMenu.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="MissionsWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Update="ArmoryWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="MainWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
@@ -22,6 +31,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="MissionSelectMenu.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MissionsWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\GUI_20212202_AXJ0GV.Client",
+    "\\GUI_20212202_AXJ0GV.Client\\Logic",
+    "\\GUI_20212202_AXJ0GV.Client\\Renderer"
   ],
-  "SelectedNode": "\\GUI_20212202_AXJ0GV.sln",
+  "SelectedNode": "\\GUI_20212202_AXJ0GV.Client\\Logic\\GameLogic.cs",
   "PreviewInSolutionExplorer": false
 }

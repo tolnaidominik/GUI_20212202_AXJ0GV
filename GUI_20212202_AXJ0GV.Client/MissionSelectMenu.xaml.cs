@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GUI_20212202_AXJ0GV.Client.Logic;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,23 +20,37 @@ namespace GUI_20212202_AXJ0GV.Client
     /// </summary>
     public partial class MissionSelectMenu : Window
     {
-        Button b = new Button();
-        
         public MissionSelectMenu()
         {
             InitializeComponent();
-            Thickness margin = b.Margin;
-            margin.Left = 50;
-            margin.Right = 50;
-            margin.Top = 30;
-            margin.Bottom = 30;
-            b.Margin = margin;
-            b.Background = Brushes.Tomato;
-            b.Foreground = Brushes.White;
-            Uniform_Grid.Columns = 5;
-            Uniform_Grid.Rows = 5;
-            b.Content = 1;
-            Uniform_Grid.Children.Add(b);
+            for (int i = 0; i < 25; i++)
+            {
+                Uniform_Grid.Children.Add(new Button() {
+                    Background = (SolidColorBrush)new BrushConverter().ConvertFrom("#FF180A3C"),
+                    Foreground = Brushes.Wheat,
+                    Name = $"button_{i}",
+                    IsEnabled = false,
+                    Content = i,
+                    Padding = new Thickness(15),
+                    Margin = new Thickness(20),
+                    FontSize = 30,
+                    FontWeight = FontWeights.ExtraBlack,
+                });
+            }
+            setEnabled(0);
+        }
+
+        public void setEnabled(int index)
+        {
+            Button button = (Button)Uniform_Grid.Children[index];
+            button.IsEnabled = true;
+            button.Click += Button_Click;
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+            _ = new MissionsWindow().ShowDialog();
         }
     }
 }

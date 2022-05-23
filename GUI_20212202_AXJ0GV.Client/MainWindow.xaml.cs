@@ -24,18 +24,51 @@ namespace GUI_20212202_AXJ0GV.Client
     public partial class MainWindow : Window
     {
         GameLogic gameLogic;
+        string playerShip;
         public MainWindow()
         {
             InitializeComponent();
             gameLogic = new GameLogic();
-            display.SetUpModel(gameLogic);
+            display.SetUpModel(gameLogic, playerShip);
         }
-
+        public void setPlayerName(string playerName)
+        {
+            gameLogic.Player.Name = playerName;
+            PlayerName.Content = playerName;
+        }
+        public void setShip(string ship = "player.png")
+        {
+            this.playerShip = ship;
+            gameLogic.selectedShip = playerShip;
+        }
         private void Timer_Tick(object sender, EventArgs e)
         {
             gameLogic.TimeStep();
-        }
+            healthBar.Value = gameLogic.Player.Health;
+            Asteroid_Level.Content = gameLogic.SelectedAsteroid.Level;
+            Asteroid_Health.Content = gameLogic.SelectedAsteroid.Health;
+            Asteroid_Damage.Content = gameLogic.SelectedAsteroid.Damage;
+            Player_Level.Content = gameLogic.Player.Level;
+            Player_XP.Content = String.Format($"{gameLogic.Player.Xp}/{gameLogic.Player.XpToLevelUp}");
+            Player_Damage.Content = gameLogic.Player.Damage;
+            if(gameLogic.Player.Health >= 80)
+            {
+                healthBar.Foreground = Brushes.Green;
+            }
+            else if(gameLogic.Player.Health >= 30 && gameLogic.Player.Health < 80)
+            {
+                healthBar.Foreground = Brushes.Yellow;
+            }
+            else
+            {
+                healthBar.Foreground = Brushes.Red;
+            }
+            if (gameLogic.GameOver)
+            {
+                this.Close();
+            }
 
+        }
         private void Client_window_SizeChanged(object sender, SizeChangedEventArgs e)
         {
             if (gameLogic != null)
@@ -55,7 +88,19 @@ namespace GUI_20212202_AXJ0GV.Client
             {
                 gameLogic.Control(Input.Right);
             }
-            else if (e.Key == Key.Space)
+            else if(e.Key == Key.Up)
+            {
+                gameLogic.Control(Input.Up);
+            }
+            else if (e.Key == Key.Down)
+            {
+                gameLogic.Control(Input.Down);
+            }
+            else if(e.Key == Key.RightCtrl)
+            {
+                gameLogic.Control(Input.Rotate);
+            }
+            else if (e.Key == Key.RightAlt)
             {
                 gameLogic.Control(Input.Shoot);
             }
@@ -68,10 +113,36 @@ namespace GUI_20212202_AXJ0GV.Client
 
             DispatcherTimer timer = new DispatcherTimer
             {
-                Interval = TimeSpan.FromMilliseconds(50)
+                Interval = TimeSpan.FromMilliseconds(1)
+            };
+            DispatcherTimer timer2 = new DispatcherTimer
+            {
+                Interval = TimeSpan.FromSeconds(30)
+            };
+            DispatcherTimer timer3 = new DispatcherTimer
+            {
+                Interval = TimeSpan.FromSeconds(1)
             };
             timer.Tick += Timer_Tick;
             timer.Start();
+            timer2.Tick += Timer2_Tick;
+            timer2.Start();
+            timer3.Tick += Timer3_Tick;
+            timer3.Start();
+        }
+
+        private void Timer3_Tick(object sender, EventArgs e)
+        {
+            gameLogic.GameTime++;
+            Cock.Content = gameLogic.GameTime;
+        }
+
+        private void Timer2_Tick(object sender, EventArgs e)
+        {
+            foreach (Asteroid astreroid in gameLogic.Asteroids)
+            {
+                astreroid.LevelUp();
+            }
         }
     }
 }

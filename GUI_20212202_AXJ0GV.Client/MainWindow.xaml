@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GUI_20212202_AXJ0GV.Client"
         xmlns:asd="clr-namespace:GUI_20212202_AXJ0GV.Client.Logic"
+        xmlns:asd2="clr-namespace:GUI_20212202_AXJ0GV.Client.Converter"
         xmlns:renderer="clr-namespace:GUI_20212202_AXJ0GV.Client.Renderer"
         mc:Ignorable="d"
         Title="Lasteroid" Height="600" Width="800" WindowStartupLocation="CenterScreen" SizeChanged="Client_window_SizeChanged"
@@ -12,6 +13,9 @@
     <Window.DataContext>
         <asd:GameLogic/>
     </Window.DataContext>
+    <Window.Resources>
+        <asd2:HealthBarValueToColorConverter x:Key="healthbarConverter"/>
+    </Window.Resources>
     <Window.Background>
         <RadialGradientBrush>
             <GradientStop Color="Black"/>
@@ -19,8 +23,46 @@
         </RadialGradientBrush>
     </Window.Background>
     <Grid x:Name="grid">
-        <renderer:Display x:Name="display"/>
-        <!--<ProgressBar Background="Green" Margin="550 0 0 560"></ProgressBar>-->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="8*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <renderer:Display x:Name="display" Grid.RowSpan="3"/>
+        <UniformGrid Columns="3" Rows="2">
+            <Label HorizontalAlignment="Center" Foreground="Wheat" Content="Health:" FontWeight="ExtraBlack"/>
+            <Label HorizontalAlignment="Center" Foreground="Wheat" Content="Time:" FontWeight="ExtraBlack"/>
+            <Label HorizontalAlignment="Center" Foreground="Wheat" Content="Player name:" FontWeight="ExtraBlack"/>
+            <ProgressBar x:Name="healthBar" Margin="5 0 5 5" Foreground="{Binding Converter={StaticResource healthbarConverter}}"/>
+            <Label x:Name="Cock" HorizontalAlignment="Center" Foreground="Wheat" FontSize="15" Margin="5 0 5 0" FontWeight="ExtraBlack"/>
+            <Label x:Name="PlayerName" HorizontalAlignment="Center" Foreground="Wheat" FontSize="15" Margin="5 0 5 0" FontWeight="ExtraBlack"/>
+        </UniformGrid>
+        <UniformGrid Grid.Row="2" Columns="2">
+            <DockPanel>
+                <Label Content="Asteroid" Foreground="Wheat" FontSize="15"/>
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="Level:" Foreground="Wheat" FontSize="15"/>
+                        <Label x:Name="Asteroid_Level" Foreground="Wheat" FontSize="15"/>
+                        <Label Content="Health:" Foreground="Wheat" FontSize="15"/>
+                        <Label x:Name="Asteroid_Health" Foreground="Wheat" FontSize="15"/>
+                        <Label Content="Damage:" Foreground="Wheat" FontSize="15"/>
+                        <Label x:Name="Asteroid_Damage" Foreground="Wheat" FontSize="15"/>
+                    </StackPanel>
+                
+            </DockPanel>
+            <DockPanel>
+                <Label Content="Player" Foreground="Wheat" FontSize="15"/>
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="Level:" Foreground="Wheat" FontSize="15"/>
+                        <Label x:Name="Player_Level" Foreground="Wheat" FontSize="15"/>
+                        <Label Content="XP:" Foreground="Wheat" FontSize="15"/>
+                        <Label x:Name="Player_XP" Foreground="Wheat" FontSize="15"/>
+                        <Label Content="Damage:" Foreground="Wheat" FontSize="15"/>
+                        <Label x:Name="Player_Damage" Foreground="Wheat" FontSize="15"/>
+                    </StackPanel>
+                
+            </DockPanel>
+        </UniformGrid>
     </Grid>
     
 </Window>
