@@ -28,6 +28,13 @@ namespace GUI_20212202_AXJ0GV.Client
         {
             this.Close();
         }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            var asd = new MainWindow();
+            asd.setPlayerName(getPlayerName.Text);
+            asd.ShowDialog();
+        }
     }
 
 }

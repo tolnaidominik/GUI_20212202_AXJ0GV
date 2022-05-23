@@ -12,6 +12,7 @@ namespace GUI_20212202_AXJ0GV.Client.Logic
         public int Level { get; set; }
         public int Health { get; set; }
         public int Damage { get; set; }
+
         static Random rng = new Random();
         public System.Drawing.Point Center { get; set; }
         public Vector Speed { get; set; }
@@ -26,29 +27,29 @@ namespace GUI_20212202_AXJ0GV.Client.Logic
             return rnd;
         }
 
-        public Asteroid(Size area)
+        public Asteroid(Size area, int level)
         {
-            this.Level = 1;
-            this.Health = 10;
-            this.Damage = 50;
+            this.Level = level;
+            this.Health = level * 20;
+            this.Damage = level * 3;
             int vel = rng.Next(0, 4);
             switch (vel)
             {
                 case 0:
                     Center = new System.Drawing.Point(rng.Next(25, (int)area.Width - 25), 25);
-                    Speed = new Vector(RNG(-20, 20), RNG(1, 6));
+                    Speed = new Vector(RNG(-3, 3), RNG(-3, 3));
                     break;
                 case 1:
                     Center = new System.Drawing.Point(rng.Next(25, (int)area.Width - 25), (int)area.Height - 25);
-                    Speed = new Vector(RNG(-20, 20), RNG(-20, -1));
+                    Speed = new Vector(RNG(-3, 3), RNG(-3, -3));
                     break;
                 case 2:
                     Center = new System.Drawing.Point(25, rng.Next(25, (int)area.Height - 25));
-                    Speed = new Vector(RNG(0, 20), RNG(-20, 20));
+                    Speed = new Vector(RNG(-3, 3), RNG(-3, 3));
                     break;
                 case 3:
                     Center = new System.Drawing.Point((int)area.Width - 25, rng.Next(25, (int)area.Height - 25));
-                    Speed = new Vector(RNG(-20, -1), RNG(-20, 6));
+                    Speed = new Vector(RNG(-3, 3), RNG(-3, 3));
                     break;
                 default:
                     break;

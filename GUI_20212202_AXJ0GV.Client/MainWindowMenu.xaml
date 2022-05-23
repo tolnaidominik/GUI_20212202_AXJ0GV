@@ -16,14 +16,18 @@
         </RadialGradientBrush>
     </Window.Background>
     <Grid>
-        <UniformGrid Rows="4">
-            <Button Margin="250 20 250 20" Background="#FF180A3C" BorderThickness="1" BorderBrush="AliceBlue"
-                    Foreground="White" FontSize="30" Command="{Binding NewGameSelect}">New Game</Button>
-            <Button Margin="250 20 250 20" Background="#FF180A3C" BorderThickness="1" BorderBrush="AliceBlue"   
+        <UniformGrid Rows="5">
+            <StackPanel Margin="250 20 250 20">
+                <Label Content="Player name:" HorizontalAlignment="Center" Foreground="Wheat" FontSize="15"/>
+                <TextBox x:Name="getPlayerName" Background="#FF180A3C" FontSize="15" Foreground="Wheat" HorizontalAlignment="Center">Player</TextBox>
+            </StackPanel>
+            <Button Margin="250 20 250 20" Background="#FF180A3C" BorderThickness="1" BorderBrush="Wheat"
+                    Foreground="White" FontSize="30" Command="{Binding NewGameSelect}" Click="Button_Click_1">New Game</Button>
+            <Button Margin="250 20 250 20" Background="#FF180A3C" BorderThickness="1" BorderBrush="Wheat"   
                     Foreground="White" FontSize="30" Command="{Binding MissionSelect}">Mission Select</Button>
-            <Button Margin="250 20 250 20" Background="#FF180A3C" BorderThickness="1" BorderBrush="AliceBlue" 
+            <Button Margin="250 20 250 20" Background="#FF180A3C" BorderThickness="1" BorderBrush="Wheat" 
                     Foreground="White" FontSize="30">Armory</Button>
-            <Button Margin="250 20 250 20" Background="#FF180A3C" BorderThickness="1" BorderBrush="AliceBlue"  
+            <Button Margin="250 20 250 20" Background="#FF180A3C" BorderThickness="1" BorderBrush="Wheat"  
                     Foreground="White" FontSize="30" Click="Button_Click">Exit Game</Button>
         </UniformGrid>
     </Grid>

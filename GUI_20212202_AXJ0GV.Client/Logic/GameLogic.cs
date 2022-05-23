@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Toolkit.Mvvm.ComponentModel;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
@@ -8,24 +9,38 @@ using System.Windows;
 
 namespace GUI_20212202_AXJ0GV.Client.Logic
 {
-    //TODO  -> Armory (skin select, laser select)
-    //      -> Level System to finish
-    //      -> Healthbar set
-    //      -> Mission Select
+    //TODO  -> Armory (skin select, laser select) //levelup ship [LAST]
+    //      -> Healthbar set (converter)
+    //      -> Mission Select -- Change background -- Enemy (?)[LAST] 
     //      -> Leaderboard
-    //      -> Movement evolve (rotate)
-    public class GameLogic : IGameModel, IGameControl
+    //      -> Sattelite implement // PlayerHP to 100, %rate to spawn, +XP //Time Duration bonus damage (30 sec bonus dmg) [LAST]
+    //      -> Hitmarker, blow effect
+
+
+
+
+    public class GameLogic : ObservableRecipient, IGameModel, IGameControl
     {
-        const int NUMOFASTEROIDS = 10;
+        private Asteroid selectedAsteroid;
+
+        public Asteroid SelectedAsteroid
+        {
+            get { return selectedAsteroid; }
+            set { SetProperty(ref selectedAsteroid, value); }
+        }
+
+        public bool GameOver { get; set; }
+        const int NUMOFASTEROIDS = 10/2;
         public event EventHandler Changed;
-        public Player Player;
-        public AsteroidStatistic Asteroid;
+        public Player Player { get; set; }
         Random rnd = new Random();
+        Leaderboard lb;
+        public int gameTime { get; set; }
 
 
         public enum Input
         {
-            Left, Right, Shoot
+            Left, Right, Down, Up, Rotate, Shoot
         }
         public enum GameItem
         {
@@ -45,14 +60,15 @@ namespace GUI_20212202_AXJ0GV.Client.Logic
             Asteroids = new List<Asteroid>();
             for (int i = 0; i < NUMOFASTEROIDS; i++)
             {
-                Asteroids.Add(new Asteroid(new System.Windows.Size(gameArea.Width, gameArea.Height)));
+                Asteroids.Add(new Asteroid(new System.Windows.Size(gameArea.Width, gameArea.Height), 1));
             }
         }
 
         public GameLogic() 
         {
             this.Player = new Player();
-            this.Asteroid = new AsteroidStatistic();
+            GameOver = false;
+            gameTime = 0;
         }
 
         public void Control(Input input)
@@ -64,6 +80,15 @@ namespace GUI_20212202_AXJ0GV.Client.Logic
                     break;
                 case Input.Right:
                     Angle += 15;
+                    break;
+                case Input.Up:
+                    Angle = 0;
+                    break;
+                case Input.Down:
+                    Angle = 180;
+                    break;
+                case Input.Rotate:
+                    Angle += 180;
                     break;
                 case Input.Shoot:
                     NewShot();
@@ -89,6 +114,7 @@ namespace GUI_20212202_AXJ0GV.Client.Logic
 
         public void TimeStep()
         {
+            selectedAsteroid = Asteroids[1];
             for (int i = 0; i < Lasers.Count; i++)
             {
                 bool stillInside = Lasers[i].Move(new System.Drawing.Size(
@@ -104,8 +130,9 @@ namespace GUI_20212202_AXJ0GV.Client.Logic
                 bool inside = Asteroids[i].Move(new System.Drawing.Size((int)gameArea.Width, (int)gameArea.Height));
                 if (!inside)
                 {
+                    var helpLevel = Asteroids[i].Level;
                     Asteroids.RemoveAt(i);
-                    Asteroids.Add(new Asteroid(new System.Windows.Size(gameArea.Width, gameArea.Height)));
+                    Asteroids.Add(new Asteroid(new System.Windows.Size(gameArea.Width, gameArea.Height), helpLevel));
                 }
                 else
                 {
@@ -113,12 +140,18 @@ namespace GUI_20212202_AXJ0GV.Client.Logic
                     Rect shipRect = new Rect(gameArea.Width / 2 - 25, gameArea.Height / 2 - 25, 50, 50);
                     if (asteroidRect.IntersectsWith(shipRect))
                     {
-                        Asteroids.RemoveAt(i);
                         if (Player.PlayerAlive)
                         {
                             Player.GetHit(this.Asteroids[i].Damage);
+                            if(Player.Health <= 0)
+                            {
+                                MessageBox.Show("YOU DIED B*!CH.","Die",MessageBoxButton.OK);
+                                GameOver = true;
+                            }
                         }
-                        Asteroids.Add(new Asteroid(new System.Windows.Size(gameArea.Width, gameArea.Height)));
+                        var helpLevel = Asteroids[i].Level;
+                        Asteroids.RemoveAt(i);
+                        Asteroids.Add(new Asteroid(new System.Windows.Size(gameArea.Width, gameArea.Height), helpLevel));
                     }
 
                     foreach (var item in Lasers)
@@ -132,13 +165,13 @@ namespace GUI_20212202_AXJ0GV.Client.Logic
                                 Asteroids[i].GetHit(this.Player.Damage);
                                 if(Asteroids[i].Health <= 0)
                                 {
+                                    var helpLevel = Asteroids[i].Level;
                                     Asteroids.RemoveAt(i);
                                     Player.Xp += rnd.Next(10, 25);
                                     Player.LevelUp();
-                                    Asteroids.Add(new Asteroid(new System.Windows.Size(gameArea.Width, gameArea.Height)));
+                                    Asteroids.Add(new Asteroid(new System.Windows.Size(gameArea.Width, gameArea.Height), helpLevel));
                                 }
                             }
-                            
                         }
                     }
                 }

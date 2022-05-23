@@ -1,6 +1,7 @@
 ﻿using GUI_20212202_AXJ0GV.Client.Logic;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -75,8 +76,18 @@ namespace GUI_20212202_AXJ0GV.Client.Renderer
                 //generate player in the middle of the map
                 drawingContext.PushTransform(new RotateTransform(gameModel.Angle, gameArea.Width / 2, gameArea.Height / 2));
                 drawingContext.DrawRectangle(PlayerBrush, null, new Rect(gameArea.Width / 2 - 25, gameArea.Height / 2 - 25, 50, 50));
+                
                 drawingContext.Pop();
 
+                //Name ->
+
+                //FormattedText text = new FormattedText("asd",
+                //    CultureInfo.GetCultureInfo("en-us"),
+                //    FlowDirection.LeftToRight,
+                //    new Typeface("Verdana"),
+                //    32,
+                //    Brushes.White);
+                //drawingContext.DrawText(text, new Point(0, 0));
                 //generate shots
                 foreach (var laser in gameModel.Lasers)
                 {
