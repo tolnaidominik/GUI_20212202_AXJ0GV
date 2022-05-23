@@ -50,5 +50,10 @@ namespace GUI_20212202_AXJ0GV.Client
             _ = new ArmoryWindow().ShowDialog();
             this.Close();
         }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            _ = new LeaderboardWindow().ShowDialog();
+        }
     }
 }

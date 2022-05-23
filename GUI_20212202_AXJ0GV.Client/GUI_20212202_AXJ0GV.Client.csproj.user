@@ -10,6 +10,9 @@
     <Compile Update="ArmoryWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="LeaderboardWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="MainWindowMenu.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -22,6 +25,9 @@
   </ItemGroup>
   <ItemGroup>
     <Page Update="ArmoryWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="LeaderboardWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="MainWindow.xaml">

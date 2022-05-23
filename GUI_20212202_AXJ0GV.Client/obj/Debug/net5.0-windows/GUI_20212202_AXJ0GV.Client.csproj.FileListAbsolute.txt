@@ -109,3 +109,11 @@ C:\Users\d0ci\source\repos\GUI_20212202_AXJ0GV\GUI_20212202_AXJ0GV.Client\bin\De
 C:\Users\d0ci\source\repos\GUI_20212202_AXJ0GV\GUI_20212202_AXJ0GV.Client\obj\Debug\net5.0-windows\GUI_20212202_AXJ0GV.Client.csproj.AssemblyReference.cache
 C:\Users\d0ci\source\repos\GUI_20212202_AXJ0GV\GUI_20212202_AXJ0GV.Client\obj\Debug\net5.0-windows\ArmoryWindow.g.cs
 C:\Users\d0ci\source\repos\GUI_20212202_AXJ0GV\GUI_20212202_AXJ0GV.Client\obj\Debug\net5.0-windows\ArmoryWindow.baml
+C:\Users\Dominik\Source\Repos\tolnaidominik\GUI_20212202_AXJ0GV\GUI_20212202_AXJ0GV.Client\bin\Debug\net5.0-windows\Renderer\Images\missionZeroBG.jpg
+C:\Users\Dominik\Source\Repos\tolnaidominik\GUI_20212202_AXJ0GV\GUI_20212202_AXJ0GV.Client\bin\Debug\net5.0-windows\Renderer\Images\player2.png
+C:\Users\Dominik\Source\Repos\tolnaidominik\GUI_20212202_AXJ0GV\GUI_20212202_AXJ0GV.Client\obj\Debug\net5.0-windows\ArmoryWindow.g.cs
+C:\Users\Dominik\Source\Repos\tolnaidominik\GUI_20212202_AXJ0GV\GUI_20212202_AXJ0GV.Client\obj\Debug\net5.0-windows\MissionsWindow.g.cs
+C:\Users\Dominik\Source\Repos\tolnaidominik\GUI_20212202_AXJ0GV\GUI_20212202_AXJ0GV.Client\obj\Debug\net5.0-windows\ArmoryWindow.baml
+C:\Users\Dominik\Source\Repos\tolnaidominik\GUI_20212202_AXJ0GV\GUI_20212202_AXJ0GV.Client\obj\Debug\net5.0-windows\MissionsWindow.baml
+C:\Users\Dominik\Source\Repos\tolnaidominik\GUI_20212202_AXJ0GV\GUI_20212202_AXJ0GV.Client\obj\Debug\net5.0-windows\LeaderboardWindow.g.cs
+C:\Users\Dominik\Source\Repos\tolnaidominik\GUI_20212202_AXJ0GV\GUI_20212202_AXJ0GV.Client\obj\Debug\net5.0-windows\LeaderboardWindow.baml

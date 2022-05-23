@@ -27,6 +27,7 @@ namespace GUI_20212202_AXJ0GV.Client
         {
             InitializeComponent();
             gameLogic = new GameLogic();
+            gameLogic.IsMissionWindow = true;
             displayMission.SetUpModel(gameLogic);
         }
 

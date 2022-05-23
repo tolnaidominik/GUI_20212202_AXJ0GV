@@ -31,8 +31,17 @@ namespace GUI_20212202_AXJ0GV.Client.Renderer
         {
             get
             {
-                return new ImageBrush(new BitmapImage(new Uri(
-                Path.Combine("Renderer", "Images", this.gameModel.selectedShip), UriKind.RelativeOrAbsolute)));
+                if(this.gameModel.selectedShip == null)
+                {
+                    return new ImageBrush(new BitmapImage(new Uri(
+                    Path.Combine("Renderer", "Images", "player.png"), UriKind.RelativeOrAbsolute)));
+                }
+                else
+                {
+                    return new ImageBrush(new BitmapImage(new Uri(
+                    Path.Combine("Renderer", "Images", this.gameModel.selectedShip), UriKind.RelativeOrAbsolute)));
+                }
+                
             }
         }
         public Brush SatelliteBrush
@@ -61,10 +70,13 @@ namespace GUI_20212202_AXJ0GV.Client.Renderer
             }
         }
 
-        public void SetUpModel(IGameModel model, string ship)
+        public void SetUpModel(IGameModel model, string ship = "player.png")
         {
             this.gameModel = model;
-            this.gameModel.selectedShip = ship;
+            if(this.gameModel.selectedShip != null)
+            {
+                this.gameModel.selectedShip = ship;
+            }
             this.gameModel.Changed += (sender, eventargs) => this.InvalidateVisual();
         }
 

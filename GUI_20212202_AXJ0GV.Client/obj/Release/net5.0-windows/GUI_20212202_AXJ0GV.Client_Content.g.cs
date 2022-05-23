@@ -10,7 +10,9 @@
 
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("renderer/images/asteroid1.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("renderer/images/background.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("renderer/images/missionzerobg.jpg")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("renderer/images/player.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("renderer/images/player2.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("renderer/images/player_laser.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("renderer/images/satellite1.png")]
 

@@ -17,7 +17,7 @@ namespace GUI_20212202_AXJ0GV.Client.Logic
             get { return health; }
             set { SetProperty(ref health, value); }
         }
-
+        public int Points { get; set; }
         public int Damage { get; set; }
         public bool PlayerAlive { get; set; }
         public int Xp{ get; set; }
@@ -28,10 +28,11 @@ namespace GUI_20212202_AXJ0GV.Client.Logic
             this.PlayerAlive = true;
             this.Name = "Player";
             this.Level = 1;
-            this.Health = 100;
+            this.Health = 1;
             this.Damage = 10;
             this.Xp = 0;
             this.XpToLevelUp = 100;
+            this.Points = 0;
         }
 
         public void LevelUp()

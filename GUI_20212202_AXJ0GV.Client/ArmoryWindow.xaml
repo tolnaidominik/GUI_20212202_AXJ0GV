@@ -20,6 +20,7 @@
         </Grid.ColumnDefinitions>
         <Button Margin="25 250 25 250" Content="Previous" FontSize="20" Background="Honeydew" FontWeight="ExtraBlack" Click="Button_Click_1"/>
         <StackPanel Orientation="Vertical" Grid.Column="1">
+            <Label FontSize="20" HorizontalAlignment="Center" Foreground="Wheat" Content="Only for new game (not for mission select)"/>
             <Image x:Name="shipImg" Source="/player.png" Margin="150" />
             <Button Margin="100 20 100 0" Height="50" Content="Apply" FontSize="20" Background="ForestGreen" FontWeight="ExtraBlack" Click="Button_Click_2"/>
         </StackPanel>

@@ -10,11 +10,11 @@ none
 false
 TRACE;RELEASE;NET;NET5_0;NETCOREAPP
 C:\Users\Dominik\Source\Repos\tolnaidominik\GUI_20212202_AXJ0GV\GUI_20212202_AXJ0GV.Client\App.xaml
-3848295825
-5-509866615
-14-1581622393
+6872413252
+7-445357045
+20-1727463198
 194-1173790781
-MainWindow.xaml;MainWindowMenu.xaml;MissionSelectMenu.xaml;
+ArmoryWindow.xaml;LeaderboardWindow.xaml;MainWindow.xaml;MainWindowMenu.xaml;MissionSelectMenu.xaml;MissionsWindow.xaml;
 
 True
 

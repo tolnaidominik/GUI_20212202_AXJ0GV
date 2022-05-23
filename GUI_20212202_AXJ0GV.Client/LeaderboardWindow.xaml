@@ -1,0 +1,44 @@
+﻿<Window x:Class="GUI_20212202_AXJ0GV.Client.LeaderboardWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GUI_20212202_AXJ0GV.Client"
+        mc:Ignorable="d"
+        Title="Leaderboard" WindowStartupLocation="CenterScreen" Height="600" Width="800" MinHeight="600" MinWidth="800">
+    <Window.DataContext>
+        <local:LeaderboardWindowViewModel/>
+    </Window.DataContext>
+    <Window.Background>
+        <RadialGradientBrush>
+            <GradientStop Color="Black"/>
+            <GradientStop Color="#FF180A3C" Offset="1"/>
+        </RadialGradientBrush>
+    </Window.Background>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="7*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <TextBlock Text="LEADERBOARD" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="ExtraBlack" FontSize="60" Foreground="Wheat"></TextBlock>
+        <UniformGrid Columns="3" Grid.Row="1" Width="500">
+            <TextBlock FontSize="20" Foreground="Wheat" FontWeight="ExtraBlack" HorizontalAlignment="Center" VerticalAlignment="Bottom">Name</TextBlock>
+            <TextBlock FontSize="20" Foreground="Wheat" FontWeight="ExtraBlack" HorizontalAlignment="Center" VerticalAlignment="Bottom">Points</TextBlock>
+            <TextBlock FontSize="20" Foreground="Wheat" FontWeight="ExtraBlack" HorizontalAlignment="Center" VerticalAlignment="Bottom">GameTime</TextBlock>
+        </UniformGrid>
+        <ListBox ItemsSource="{Binding sortedLeaderboard}" Grid.Row="2" Background="Transparent" Width="800" HorizontalContentAlignment="Center">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Border BorderBrush="Wheat" BorderThickness="2">
+                        <UniformGrid Columns="3" Width="500">
+                            <Label FontSize="14" FontWeight="ExtraBlack" Content="{Binding Name}" Foreground="Wheat" HorizontalAlignment="Center"></Label>
+                            <Label FontSize="14" FontWeight="ExtraBlack" Content="{Binding Points}" Foreground="Wheat" HorizontalAlignment="Center"></Label>
+                            <Label FontSize="14" FontWeight="ExtraBlack" Content="{Binding GameTime}" Foreground="Wheat" HorizontalAlignment="Center"></Label>
+                        </UniformGrid>
+                    </Border>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+    </Grid>
+</Window>
